@@ -1,0 +1,61 @@
+{
+	"description": "项目配置文件。",
+	"setting": {
+		"urlCheck": true,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true
+	},
+	"compileType": "miniprogram",
+	"libVersion": "1.6.0",
+	"appid": "wx0c40c6e56cd197ff",
+	"projectname": "%E6%98%93%E6%9C%AC%E4%B9%A6",
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": -1,
+			"list": [
+				{
+					"id": 0,
+					"name": "goodindex",
+					"pathName": "pages/good/index",
+					"query": "id=8d7e52a51c",
+					"scene": "1011"
+				},
+				{
+					"id": -1,
+					"name": "typeindex",
+					"pathName": "pages/type/index",
+					"query": "",
+					"scene": "1011"
+				},
+				{
+					"id": -1,
+					"name": "payorder",
+					"pathName": "pages/payorder/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "center",
+					"pathName": "pages/center/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "order",
+					"pathName": "pages/order/index",
+					"query": ""
+				}
+			]
+		}
+	}
+}
