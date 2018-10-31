@@ -20,6 +20,7 @@ Page({
     query.equalTo("is_rec", 1); //推荐
     query.find({
       success: result => {
+        console.log(result)
         let rec = [];
         let recrow = [];
         for (let gid in result){

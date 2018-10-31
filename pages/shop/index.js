@@ -20,6 +20,7 @@ Page({
     this.setData({
       searchVal: e.detail.value
     })
+    console.log(e.detail.value)
     this.search()
   },
   clear(){
@@ -33,13 +34,16 @@ Page({
     this.getData();
   },
   search(){
+    console.log("searching....")
     this.setData({
       goods: [], //页面数据
       pagination: 0, //页码
       pageSize: 8, //每页数据
       nodata: true, //无数据
     })
-    query.equalTo("menu_name", { "$regex": `${this.data.searchVal}.*`});
+    //query.equalTo("menu_name", { "$regex": `${this.data.searchVal}.*`});
+    //query.equalTo("menu_name", this.data.searchVal);
+    query.equalTo("menu_name", "==", { "$regex": "" + this.data.searchVal + ".*" });
     query.limit(this.data.pageSize); //返回n条数据
     query.skip(this.data.pageSize * this.data.pagination); //分页查询
     query.descending('createdAt'); 
@@ -116,5 +120,10 @@ Page({
   onReachBottom() {
     //下拉触底加载更多数据
     this.getData();
+    wx.showToast({
+      title: '成功',
+      icon: 'success',
+      duration: 2000
+    })
   }
 })
