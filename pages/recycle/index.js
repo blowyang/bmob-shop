@@ -1,66 +1,36 @@
-// pages/recycle/index.js
+var common = require('../../utils/common.js');
+var Bmob = require("../../utils/bmob.js");
+var util = require("../../utils/util.js");
+var that;
 Page({
+  onShareAppMessage() {
+    return {
+      title: '扫码',
+      path: 'page/API/pages/scan-code/scan-code'
+    }
+  },
 
-  /**
-   * 页面的初始数据
-   */
   data: {
-
+    result: ''
   },
+  onLoad(){
+    that = this;
+    //获取用户的信息
+    var User = Bmob.Object.extend("_User");
+    var currentUser = Bmob.User.current();
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-
+    //var objectid = currentUser.id;
+    console.log(currentUser)
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
+  scanCode() {
+    const that = this
+    wx.scanCode({
+      success(res) {
+        that.setData({
+          result: res.result
+        })
+      },
+      fail() { }
+    })
   }
 })
