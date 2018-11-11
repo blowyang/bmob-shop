@@ -3,3 +3,13 @@
   min-height: 48rpx;
   word-break: break-all;
 }
+.canvas {
+    margin: 220rpx auto;
+    width: 150px;
+    height: 150px;
+    /* border: 1px solid black; */
+}
+
+.tip {
+    text-align: center;
+}

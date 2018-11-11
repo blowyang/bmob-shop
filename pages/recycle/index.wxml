@@ -13,5 +13,11 @@
       <button type="primary" bindtap="scanCode">扫一扫</button>
     </view>
   </view>
-
+  <canvas class='canvas' canvas-id='canvas' bindlongtap='save'></canvas>
+  <view class='tip'>长按保存</view>
+  <view class="btn-area">
+      <button type="primary" bindtap="upload">上传图片</button>
+    </view>
 </view>
+
+

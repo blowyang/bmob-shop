@@ -13,7 +13,8 @@
     "pages/brandShop/brandShop",
     "pages/getCoupon/getCoupon",
     "pages/sale/sale",
-    "pages/recycle/index"
+    "pages/recycle/index",
+    "pages/picasa/picasa"
   ],
   "window": {
     "navigationBarBackgroundColor": "#FAFAFA",
@@ -42,8 +43,8 @@
       },
       {
         "selectedIconPath": "images/recycle.png",
-        "iconPath": "images/recycle1.png",
-        "pagePath": "pages/recycle/index",
+        "iconPath": "images/recycle1.png",       
+        "pagePath": "pages/picasa/picasa",
         "text": "回收"
       },
       {
