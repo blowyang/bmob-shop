@@ -8,6 +8,24 @@ Page({
     loading: true
   },
   onLoad: function () {
+    wx.request({
+      /*
+      url: 'http://feedback.api.juhe.cn/ISBN', 
+      data: {
+        key: 'e4cf595b1de5a4335aca2299b7898443',
+        sub: '7544258971'
+      },
+      */
+      //url: 'http://127.0.0.1/v2/book/isbn/9787111128069',
+      //url: 'http://localhost/v2/movie/top250',
+      
+      header: {
+        "content-type": "application/xml"
+      },
+      success(res) {
+        console.log(res.data)
+      }
+    })
 
   },
   onReady: function () {
